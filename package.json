@@ -1,0 +1,23 @@
+{
+  "name": "api-man",
+  "version": "0.0.1",
+  "description": "基于 axios 封装的接口管理方案",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simdd/api-man.git"
+  },
+  "keywords": [
+    "api",
+    "restful"
+  ],
+  "author": "SIMDD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simdd/api-man/issues"
+  },
+  "homepage": "https://github.com/simdd/api-man#readme"
+}

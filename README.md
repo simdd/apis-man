@@ -1,4 +1,7 @@
-# api-man
+# apis-man
+
+[![npm version](https://img.shields.io/npm/v/apis-man.svg)](https://www.npmjs.com/package/apis-man)
+[![license](https://img.shields.io/npm/l/apis-man.svg)](https://www.npmjs.com/package/apis-man)
 
 基于 [axios](https://github.com/axios/axios) 封装的接口管理方案
 
@@ -85,7 +88,7 @@ rest: {
 ## Usage
 
 ```javascript
-import Apis from "api-man";
+import Apis from "apis-man";
 import serverMap from "./serverMap";
 import apiMap from "./apiMap";
 const apis = new Apis(serverMap, apiMap);

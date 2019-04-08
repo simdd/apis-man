@@ -1,5 +1,5 @@
 {
-  "name": "api-man",
+  "name": "apis-man",
   "version": "0.0.1",
   "description": "基于 axios 封装的接口管理方案",
   "main": "index.js",

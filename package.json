@@ -1,6 +1,6 @@
 {
-  "name": "apis-man",
-  "version": "0.0.1",
+  "name": "@forchange/apis",
+  "version": "0.0.2",
   "description": "基于 axios 封装的接口管理方案",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "parcel": "^1.12.3"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {}
 }

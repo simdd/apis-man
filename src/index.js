@@ -12,7 +12,7 @@ class Apis {
       this.combine();
       return this.instance;
     } else {
-      console.error("api-man: 参数不合法，请检查你的配置参数");
+      console.error("apis: 参数不合法，请检查你的配置参数");
     }
   }
 
@@ -34,7 +34,7 @@ class Apis {
     }
 
     if (!base) {
-      console.error("api-man: 找不到默认服务器配置");
+      console.error("apis: 找不到默认服务器配置");
     }
 
     return base;

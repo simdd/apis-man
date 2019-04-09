@@ -1,7 +1,7 @@
-# apis-man
+# apis
 
-[![npm version](https://img.shields.io/npm/v/apis-man.svg)](https://www.npmjs.com/package/apis-man)
-[![license](https://img.shields.io/npm/l/apis-man.svg)](https://www.npmjs.com/package/apis-man)
+[![npm version](https://img.shields.io/npm/v/@forchange/apis.svg)](https://www.npmjs.com/package/@forchange/apis)
+[![license](https://img.shields.io/npm/l/@forchange/apis.svg)](https://www.npmjs.com/package/@forchange/apis)
 
 基于 [axios](https://github.com/axios/axios) 封装的接口管理方案
 
@@ -14,7 +14,7 @@
 ## Installing
 
 ```
-$ npm install apis
+$ npm install @forchange/apis
 ```
 
 ## Syntax
@@ -85,10 +85,29 @@ rest: {
 
 ## Interceptors
 
+Apis 通过`useReq`,`useRes`两个接口对请求做拦截，可以多次调用，添加多个 middleware
+
+#### Apis.useReq(middleware)
+
+同 [`axios.interceptors.request.use`](https://github.com/axios/axios#interceptors)
+
+#### Apis.useRes(middleware)
+
+同 [`axios.interceptors.response.use`](https://github.com/axios/axios#interceptors)
+
+```javascript
+import Apis from "@forchange/apis";
+
+Apis.useReq(function(config) {
+  config.headers.Authorization = "Bearer";
+  return config;
+});
+```
+
 ## Usage
 
 ```javascript
-import Apis from "apis-man";
+import Apis from "@forchange/apis";
 import serverMap from "./serverMap";
 import apiMap from "./apiMap";
 const apis = new Apis(serverMap, apiMap);

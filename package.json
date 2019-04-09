@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "基于 axios 封装的接口管理方案",
   "main": "src/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

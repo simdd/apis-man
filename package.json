@@ -1,6 +1,6 @@
 {
   "name": "@forchange/apis",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "基于 axios 封装的接口管理方案",
   "main": "src/index.js",
   "types": "types/index.d.ts",

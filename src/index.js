@@ -85,7 +85,10 @@ class Apis {
   combine() {
     for (const key of Object.keys(this.apiMap)) {
       this.instance[key] = config => {
-        const result = this.comboo(this.apiMap[key], config);
+        let result = this.apiMap[key];
+        if (config) {
+          result = this.comboo(this.apiMap[key], config);
+        }
         return axios.request(result);
       };
     }

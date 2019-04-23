@@ -66,21 +66,16 @@ new Apis(serverMap, apiMap);
 }
 ```
 
-## Custom Config
+## Custom
 
-#### `rest`：url 中 restful 参数的值
+- #### `rest`：restful 参数
 
 ```javascript
-// url
-/order/:id
-
-// rest
-rest: {
-    id: 123
-}
-
-// result
-/order/123
+apis.postOrder({
+  rest: {
+    id: 1
+  }
+})
 ```
 
 ## Interceptors

@@ -36,12 +36,6 @@ new Apis(serverMap, apiMap);
   "baseServer": {
     "default": true,
     "baseUrl": "https://base.apis.com"
-  },
-  "authServer": {
-    "baseUrl": "https://auth.apis.com"
-  },
-  "orderServer": {
-    "baseUrl": "https://base.apis.com/order"
   }
 }
 ```
@@ -57,11 +51,6 @@ new Apis(serverMap, apiMap);
   "getBaseInfo": {
     "method": "get",
     "url": "/info"
-  },
-  "postOrder": {
-    "server": "orderServer",
-    "method": "post",
-    "url": "/order/:id"
   }
 }
 ```
@@ -91,8 +80,6 @@ Apis 通过`useReq`,`useRes`两个接口对请求做拦截，可以多次调用�
 同 [`axios.interceptors.response.use`](https://github.com/axios/axios#interceptors)
 
 ```javascript
-import Apis from "@forchange/apis";
-
 Apis.useReq(function(config) {
   config.headers.Authorization = "Bearer";
   return config;
@@ -102,23 +89,11 @@ Apis.useReq(function(config) {
 ## Usage
 
 ```javascript
-import Apis from "@forchange/apis";
-import serverMap from "./serverMap";
-import apiMap from "./apiMap";
 const apis = new Apis(serverMap, apiMap);
 
 apis.getTest({
   params: {
     color: "green"
-  }
-});
-
-apis.postTest({
-  rest: {
-    id: 3
-  },
-  data: {
-    name: "fred"
   }
 });
 ```
